@@ -1,5 +1,5 @@
 /**
- * Sebuah class untuk menciptakan lapangan untuk tupai tersebut bisa melompat
+ * Sebuah class untuk menciptakan lapangan atau kotakAngka untuk tupai tersebut bisa melompat
  * @author Abdul Hafidh
  * @version 2021.12.10
  */

@@ -1,6 +1,6 @@
 import java.util.Scanner; // Library Scanner
 /**
- * Sebuah source code untuk mengalokasikan posisi tupai ketika permainan dijalankan
+ * Sebuah source code untuk mengisi method pada perilaku dan atribut pada tupai
  * @author Abdul Hafidh
  * @version 2021.10.12
  */

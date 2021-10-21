@@ -1,7 +1,6 @@
 import java.util.Scanner;
 /**
- * Sebuah class yang ada method utamanya
- * 
+ * Sebuah class yang berisi method public static void main(String[] args) yang bertujuan untuk memberikan output kepada user
  * @author Abdul Hafidh
  * @version 2021.10.12
  */
@@ -10,7 +9,7 @@ public class MainSquirrelJump {
     private boolean play;
     private String kalimat;
     /**
-     * 
+     * Sebuah method constructor untuk menginisialisikan nilai awal
      */
     public MainSquirrelJump(boolean play){
         this.play = play;
@@ -54,37 +53,37 @@ public class MainSquirrelJump {
         while (condition) {
             System.out.print("Masukkan nama tupai: ");
             nama = in.nextLine();
-            
-
+        
             System.out.print("Tentukan arah yang disukai tupai: ");
             arah = lokasi.nextLine();
-            
-
+        
             System.out.print("Masukkan jumlah tupai: ");
             jumTupai = jump.nextInt();
-            
-
+    
             // Memanggil 3 objek
-            Pemain objekLompat = new Pemain();
+            Pemain objekPemain = new Pemain();
             KotakAngka objekKotakAngka = new KotakAngka();
             MainSquirrelJump objekLanjut = new MainSquirrelJump(true);
 
-            // Memanggil method arah dan nama
-            objekLompat.setNama(nama);
-            objekLompat.setArahLompat(arah);
-            objekLompat.buatSquirrel();
-            System.out.println("[" + objekLompat.getArahLompat() + "]");
-            System.out.println("[" + objekLompat.getNama() + "]");
-            
-            // Memanggil method buatkotak
+            // Memanggil method di bawah ini bertujuan untuk mendeskripsikan squirrel (tupai)
+            objekPemain.setNama(nama);
+            objekPemain.setArahLompat(arah);
+            objekPemain.buatSquirrel();
+            System.out.println("[" + objekPemain.getArahLompat() + "]");
+            System.out.println("[" + objekPemain.getNama() + "]");
             objekKotakAngka.setTambahSquirrel(jumTupai);
             objekKotakAngka.gettambahSquirrel();
             System.out.println("[" + objekKotakAngka.toString() + "]");
+            // Memanggil method buatkotak
             objekKotakAngka.buatKotak();
             objekKotakAngka.cetakKotak();
-            objekLompat.getkesempatanLompat();
-            objekLompat.SquirrelJump();
-            objekLompat.reward();
+            // Memanggil method getter untuk mendapatkan nilai dari kesempatan lompat tupai
+            objekPemain.getkesempatanLompat();
+            // Memanggil method ini untuk menentukan arah loncatan tupai
+            objekPemain.SquirrelJump();
+            // Memanggil method ini untuk memberikan penghargaan kepada user
+            objekPemain.reward();
+            // Implementasi untuk bermain kembali atau tidak
             System.out.print("Apakah anda ingin bermain lagi? (y/n) : ");
             kalimat = ulang.nextLine();
             
@@ -101,7 +100,7 @@ public class MainSquirrelJump {
                // System.out.println(objekLanjut.getMainkan());
             }
         }
-        // Sebuah method untuk menutupi inputan
+        // Memanggil method ini dari java.lang.objects untuk menutupi inputan agar mencegah terjadinya warning! pada program
         in.close();
         lokasi.close();
         jump.close();
