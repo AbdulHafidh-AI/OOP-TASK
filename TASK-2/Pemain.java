@@ -59,7 +59,7 @@ public class Pemain{
      */
     public void SquirrelJump(){
         Scanner in = new Scanner(System.in);
-        System.out.println(this.nama + "(Squirrel) Berada di Posisi " + posisiTupai);
+        System.out.println(this.nama + " (Squirrel) Berada di Posisi " + posisiTupai);
         for(int i = 1; i <= kesempatan; i++){
             if (posisiTupai == 100)
             break;
@@ -79,11 +79,11 @@ public class Pemain{
                             System.out.println("You can only jump to adjacent place try again");
                         }else{
                             posisiTupai = lompat;
-                            System.out.println(this.nama + "(Squirrel) is at number " + posisiTupai);
+                            System.out.println(this.nama + " (Squirrel) is at number " + posisiTupai);
                         }
                     }else{
                     posisiTupai = lompat;
-                    System.out.println(this.nama + "(Squirrel) is at number " + posisiTupai);
+                    System.out.println(this.nama + " (Squirrel) is at number " + posisiTupai);
                     }
                 }else if(posisiTupai - lompat == 11 || posisiTupai - lompat == 9 || posisiTupai - lompat == -11 || posisiTupai - lompat == -9){
                     posisiTupai = lompat;
@@ -104,7 +104,7 @@ public class Pemain{
             Scanner in = new Scanner(System.in);
             System.out.print("Mohon input warna tupai yang disukai: ");
             warna = in.nextLine();
-            System.out.println("Tupai anda bewarna: " + warna); 
+            System.out.println("[" +"Tupai anda bewarna: " + warna + "]"); 
         }
     /**
      * Sebuah method mutator untuk merayakan ucapan yang menang atau kalah

@@ -72,13 +72,14 @@ public class MainSquirrelJump {
             // Memanggil method arah dan nama
             objekLompat.setNama(nama);
             objekLompat.setArahLompat(arah);
-            System.out.println("[" + objekLompat.getArahLompat() + "]");
-            System.out.println(objekLompat.getNama());
             objekLompat.buatSquirrel();
+            System.out.println("[" + objekLompat.getArahLompat() + "]");
+            System.out.println("[" + objekLompat.getNama() + "]");
+            
             // Memanggil method buatkotak
             objekKotakAngka.setTambahSquirrel(jumTupai);
             objekKotakAngka.gettambahSquirrel();
-            System.out.println(objekKotakAngka.toString());
+            System.out.println("[" + objekKotakAngka.toString() + "]");
             objekKotakAngka.buatKotak();
             objekKotakAngka.cetakKotak();
             objekLompat.getkesempatanLompat();
