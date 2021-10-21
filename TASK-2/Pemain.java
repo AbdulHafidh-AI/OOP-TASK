@@ -30,7 +30,10 @@ public class Pemain{
     public Pemain(String nama){
         this.nama = nama;
     }
-
+    /**
+     * Sebuah method untuk mengembalikan nilai string
+     * @return "Nama Tupai adalah : " + this.nama
+     */
     public String getNama(){
         return "Nama Tupai adalah : " + this.nama;
     }
@@ -51,7 +54,6 @@ public class Pemain{
         }
         return kesempatan;
     }
-
     /**
      * Sebuah method mutator untuk mengarahkan lompatan tupai tidak secara diagonal
      */
@@ -91,11 +93,19 @@ public class Pemain{
                 }else{
                     System.out.println("Wrong jump location Try again");
                 }  
-                System.out.println("Anda sudah melakukan inputan sebanyak: " + i +" kali"); 
-            }
-            
-        
+                System.out.println("Anda sudah melakukan inputan sebanyak: " + i +" kali");   
+        }
         }   
+        /**
+         * Sebuah method mutator untuk membuat karakter tupai 
+         */
+        public void buatSquirrel(){
+            String warna;
+            Scanner in = new Scanner(System.in);
+            System.out.print("Mohon input warna tupai yang disukai: ");
+            warna = in.nextLine();
+            System.out.println("Tupai anda bewarna: " + warna); 
+        }
     /**
      * Sebuah method mutator untuk merayakan ucapan yang menang atau kalah
      */
@@ -106,11 +116,17 @@ public class Pemain{
             System.out.println("Sorry You lost -_-");
         }
     }
-
+    /**
+     * Sebuah method setter untuk mengatur arah lompat
+     * @param arah
+     */
     public void setArahLompat(String arah){
         this.arah = arah;
     }
-
+    /**
+     * Sebuah method untuk m
+     * @return kalimat + this.arah;
+     */
     public String getArahLompat(){
         String kalimat;
         if(this.arah != "kiri"){
@@ -120,6 +136,4 @@ public class Pemain{
         }
         return kalimat  + this.arah;
     }
-
-    
 }

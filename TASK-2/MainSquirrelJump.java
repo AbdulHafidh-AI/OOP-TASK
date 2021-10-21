@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 /**
  * Sebuah class yang ada method utamanya
  * 
@@ -10,6 +9,12 @@ public class MainSquirrelJump {
     // FIELDS
     private boolean play;
     private String kalimat;
+    /**
+     * 
+     */
+    public MainSquirrelJump(boolean play){
+        this.play = play;
+    }
     /**
      * Sebuah method accessor untuk mengembalikan nilai true atau false
      * @return this.play
@@ -49,23 +54,27 @@ public class MainSquirrelJump {
         while (condition) {
             System.out.print("Masukkan nama tupai: ");
             nama = in.nextLine();
+            
 
             System.out.print("Tentukan arah yang disukai tupai: ");
             arah = lokasi.nextLine();
+            
 
             System.out.print("Masukkan jumlah tupai: ");
             jumTupai = jump.nextInt();
+            
 
             // Memanggil 3 objek
             Pemain objekLompat = new Pemain();
             KotakAngka objekKotakAngka = new KotakAngka();
-            MainSquirrelJump objekLanjut = new MainSquirrelJump();
+            MainSquirrelJump objekLanjut = new MainSquirrelJump(true);
 
             // Memanggil method arah dan nama
             objekLompat.setNama(nama);
             objekLompat.setArahLompat(arah);
-            System.out.println(objekLompat.getArahLompat());
+            System.out.println("[" + objekLompat.getArahLompat() + "]");
             System.out.println(objekLompat.getNama());
+            objekLompat.buatSquirrel();
             // Memanggil method buatkotak
             objekKotakAngka.setTambahSquirrel(jumTupai);
             objekKotakAngka.gettambahSquirrel();
@@ -75,7 +84,7 @@ public class MainSquirrelJump {
             objekLompat.getkesempatanLompat();
             objekLompat.SquirrelJump();
             objekLompat.reward();
-            System.out.println("Apakah anda ingin main lagi? (y/n) : ");
+            System.out.print("Apakah anda ingin bermain lagi? (y/n) : ");
             kalimat = ulang.nextLine();
             
             if (kalimat.equalsIgnoreCase("y")) {
@@ -83,14 +92,18 @@ public class MainSquirrelJump {
             } else {
                 objekLanjut.setMainkan("tidak");
             }
-
             if (objekLanjut.getMainkan() == true) {
                 condition = true;
-                System.out.println(objekLanjut.getMainkan());
+               // System.out.println(objekLanjut.getMainkan());
             } else {
                 condition = false;
-                System.out.println(objekLanjut.getMainkan());
+               // System.out.println(objekLanjut.getMainkan());
             }
         }
+        // Sebuah method untuk menutupi inputan
+        in.close();
+        lokasi.close();
+        jump.close();
+        ulang.close();
     }
 }
