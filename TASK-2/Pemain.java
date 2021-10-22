@@ -35,7 +35,7 @@ public class Pemain{
      * @return "Nama Tupai adalah : " + this.nama
      */
     public String getNama(){
-        return "Nama Tupai adalah : " + this.nama;
+        return "Nama kamu adalah : " + this.nama;
     }
 
     public void setNama(String nama){
@@ -59,7 +59,7 @@ public class Pemain{
      */
     public void SquirrelJump(){
         Scanner in = new Scanner(System.in);
-        System.out.println(this.nama + " (Squirrel) Berada di Posisi " + posisiTupai);
+        System.out.println("(Tupai) Berada di Posisi " + posisiTupai);
         for(int i = 1; i <= kesempatan; i++){
             if (posisiTupai == 100)
             break;
@@ -72,22 +72,22 @@ public class Pemain{
                             System.out.println("You can Only jump to adjacent place try again");
                         }else{
                             posisiTupai = lompat;
-                            System.out.println(this.nama + "(Squirrel) is at number " + posisiTupai);
+                            System.out.println("(Tupai) is at number " + posisiTupai);
                         }
                     }else if( posisiTupai == bilanganUjungKiri[0] || posisiTupai == bilanganUjungKiri[1] || posisiTupai == bilanganUjungKiri[2] || posisiTupai == bilanganUjungKiri[3] || posisiTupai == bilanganUjungKiri[4] || posisiTupai == bilanganUjungKiri[5] || posisiTupai == bilanganUjungKiri[6] || posisiTupai == bilanganUjungKiri[7] || posisiTupai == bilanganUjungKiri[8]){
                         if(posisiTupai - lompat == 1){
                             System.out.println("You can only jump to adjacent place try again");
                         }else{
                             posisiTupai = lompat;
-                            System.out.println(this.nama + " (Squirrel) is at number " + posisiTupai);
+                            System.out.println("(Tupai) is at number " + posisiTupai);
                         }
                     }else{
                     posisiTupai = lompat;
-                    System.out.println(this.nama + " (Squirrel) is at number " + posisiTupai);
+                    System.out.println("(Tupai) is at number " + posisiTupai);
                     }
                 }else if(posisiTupai - lompat == 11 || posisiTupai - lompat == 9 || posisiTupai - lompat == -11 || posisiTupai - lompat == -9){
                     posisiTupai = lompat;
-                    System.out.println(this.nama + " is at number " + posisiTupai);
+                    System.out.println(" is at number " + posisiTupai);
                 }else if(posisiTupai == lompat){
                     System.out.println("Posisi yang anda input sama");
                 }else{

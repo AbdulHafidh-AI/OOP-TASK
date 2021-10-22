@@ -51,7 +51,9 @@ public class MainSquirrelJump {
         boolean condition = true;
         
         while (condition) {
-            System.out.print("Masukkan nama tupai: ");
+
+            System.out.println("================================ PERMAINAN TUPAI LOMPAT ================================================");
+            System.out.print("Masukkan nama kamu: ");
             nama = in.nextLine();
         
             System.out.print("Tentukan arah yang disukai tupai: ");

@@ -31,7 +31,9 @@ public class KotakAngka{
      * Sebuah method mutator untuk mencetak kotak 
      */
     public void cetakKotak(){
+        System.out.println("                                       [KOTAK TUPAI]                                                          ");
         System.out.println("=================================================================================================================");
+        System.out.println("                        ADA SEBANYAK " + jumTupai + " TUPAI YANG MELOMPAT-LOMPAT ^_^");
         for(int i = 0; i < 10; i++){
             for(int j = 0; j < 10; j++){
                 System.out.printf("%10d]", Kotak[i][j]);
@@ -40,7 +42,9 @@ public class KotakAngka{
                 }
             }
         }
+        System.out.println("                           [HANYA BOLEH MELOMPAT DI SATU KOTAK YANG BERSISIAN]                                    ");
         System.out.println("=================================================================================================================");
+       
     }
 
     /**
