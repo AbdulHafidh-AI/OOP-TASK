@@ -129,10 +129,10 @@ public class Pemain{
      */
     public String getArahLompat(){
         String kalimat;
-        if(this.arah != "kiri"){
+        if(this.arah.equalsIgnoreCase("kiri")){
          kalimat = " Benar, Tupai tidak suka bergerak ke arah ";
         }else{
-          kalimat = "Tupai sangat suka bergerak ke arah";
+          kalimat = " Sayangnya, Tupai sangat suka bergerak ke arah ";
         }
         return kalimat  + this.arah;
     }

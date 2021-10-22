@@ -56,6 +56,7 @@ public class MainSquirrelJump {
             System.out.print("Masukkan nama kamu: ");
             nama = in.nextLine();
         
+            System.out.println("[KANAN]        [KIRI]       [ATAS]        [BAWAH]");
             System.out.print("Ayo coba tebak arah tidak disukai tupai: ");
             arah = lokasi.nextLine();
         
