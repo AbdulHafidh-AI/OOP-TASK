@@ -82,6 +82,8 @@ public class MainSquirrelJump {
             objekKotakAngka.cetakKotak();
             // Memanggil method getter untuk mendapatkan nilai dari kesempatan lompat tupai
             objekPemain.getkesempatanLompat();
+            // Memanggil method dibawah ini untuk mencetak kesempatan lompat
+            System.out.println(objekPemain.cetakKesempatanLompatString());
             // Memanggil method ini untuk menentukan arah loncatan tupai
             objekPemain.SquirrelJump();
             // Memanggil method ini untuk memberikan penghargaan kepada user

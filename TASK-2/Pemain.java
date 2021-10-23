@@ -48,11 +48,18 @@ public class Pemain{
      */
     public int getkesempatanLompat(){
         if(this.posisiTupai <= 50){
-            kesempatan = 20;
+            this.kesempatan = 20;
         }else{
-            kesempatan = 10;
+            this.kesempatan = 10;
         }
         return kesempatan;
+    }
+    /**
+     * Sebuah method accessor untuk mencetak kesempatan lompat agar pemain dapat mengetahuinya
+     * @return "Kamu hanya bisa menebak sebanyak " + this.kesempatan
+     */
+    public String cetakKesempatanLompatString(){
+        return "Kamu hanya bisa menebak sebanyak " + this.kesempatan;
     }
     /**
      * Sebuah method mutator untuk mengarahkan lompatan tupai tidak secara diagonal
