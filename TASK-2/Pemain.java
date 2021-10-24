@@ -116,12 +116,14 @@ public class Pemain{
     /**
      * Sebuah method mutator untuk merayakan ucapan yang menang atau kalah
      */
-    public void reward(){
+    public String getReward(){
+        String reward;
         if(posisiTupai == 100){
-            System.out.println("Congratulation You win ^_^");
+            reward = "Congratulation You win ^_^";
         }else{
-            System.out.println("Sorry You lost -_-");
+            reward ="Sorry You lost -_-";
         }
+        return reward;
     }
     /**
      * Sebuah method setter untuk mengatur arah lompat

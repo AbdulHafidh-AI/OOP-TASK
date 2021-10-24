@@ -87,7 +87,7 @@ public class MainSquirrelJump {
             // Memanggil method ini untuk menentukan arah loncatan tupai
             objekPemain.squirrelJump();
             // Memanggil method ini untuk memberikan penghargaan kepada user
-            objekPemain.reward();
+            System.out.println(objekPemain.getReward());
             // Implementasi untuk bermain kembali atau tidak
             System.out.print("Apakah anda ingin bermain lagi? (y/n) : ");
             kalimat = ulang.nextLine();
