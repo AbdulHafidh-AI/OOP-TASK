@@ -63,6 +63,7 @@ public class KotakAngka{
     }
     /**
      * Sebuah method toString untuk mencetak hasil output yang diinginkan
+     * @return "Tupainya berjumlah " + this.jumTupai
      */
     public String toString(){
         return "Tupainya berjumlah " + this.jumTupai;
