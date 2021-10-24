@@ -65,7 +65,7 @@ public class Pemain{
         return "Kamu hanya bisa menebak sebanyak " + this.kesempatan;
     }
     /**
-     * Sebuah method mutator untuk mengarahkan lompatan tupai tidak secara diagonal
+     * Sebuah method mutator untuk mengarahkan lompatan tupai, intinya dikarenakan method dibawah ini tupai bisa melompat secara horizontal dan diagonal
      */
     public void squirrelJump(){
         Scanner in = new Scanner(System.in);

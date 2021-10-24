@@ -99,10 +99,8 @@ public class MainSquirrelJump {
             }
             if (objekLanjut.getMainkan() == true) {
                 condition = true;
-               // System.out.println(objekLanjut.getMainkan());
             } else {
                 condition = false;
-               // System.out.println(objekLanjut.getMainkan());
             }
         }
         // Memanggil method ini dari java.lang.objects untuk menutupi inputan agar mencegah terjadinya warning! pada program
