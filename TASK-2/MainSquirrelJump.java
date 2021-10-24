@@ -75,17 +75,17 @@ public class MainSquirrelJump {
             System.out.println("[" + objekPemain.getArahLompat() + "]");
             System.out.println("[" + objekPemain.getNama() + "]");
             objekKotakAngka.setTambahSquirrel(jumTupai);
-            objekKotakAngka.gettambahSquirrel();
+            objekKotakAngka.getTambahSquirrel();
             System.out.println("[" + objekKotakAngka.toString() + "]");
             // Memanggil method buatkotak
             objekKotakAngka.buatKotak();
             objekKotakAngka.cetakKotak();
             // Memanggil method getter untuk mendapatkan nilai dari kesempatan lompat tupai
-            objekPemain.getkesempatanLompat();
+            objekPemain.getKesempatanLompat();
             // Memanggil method dibawah ini untuk mencetak kesempatan lompat
-            System.out.println(objekPemain.cetakKesempatanLompatString());
+            System.out.println(objekPemain.cetakKesempatanLompat());
             // Memanggil method ini untuk menentukan arah loncatan tupai
-            objekPemain.SquirrelJump();
+            objekPemain.squirrelJump();
             // Memanggil method ini untuk memberikan penghargaan kepada user
             objekPemain.reward();
             // Implementasi untuk bermain kembali atau tidak

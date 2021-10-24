@@ -58,7 +58,7 @@ public class KotakAngka{
      * Sebuah method getter untuk mengembalikan jumTupai
      * @return this.jumTupai
      */
-    public int gettambahSquirrel(){
+    public int getTambahSquirrel(){
         return this.jumTupai;
     }
     /**

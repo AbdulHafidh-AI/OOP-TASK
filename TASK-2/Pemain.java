@@ -46,7 +46,7 @@ public class Pemain{
      * Sebuah method getter atau accessor untuk mengembalikan nilai dari kesempatan (nilai dari kesempatan ini akan menentukan kesempatan tupai melompat)
      * @return kesempatan
      */
-    public int getkesempatanLompat(){
+    public int getKesempatanLompat(){
         if(this.posisiTupai <= 50){
             this.kesempatan = 20;
         }else{
@@ -58,13 +58,13 @@ public class Pemain{
      * Sebuah method accessor untuk mencetak kesempatan lompat agar pemain dapat mengetahuinya
      * @return "Kamu hanya bisa menebak sebanyak " + this.kesempatan
      */
-    public String cetakKesempatanLompatString(){
+    public String cetakKesempatanLompat(){
         return "Kamu hanya bisa menebak sebanyak " + this.kesempatan;
     }
     /**
      * Sebuah method mutator untuk mengarahkan lompatan tupai tidak secara diagonal
      */
-    public void SquirrelJump(){
+    public void squirrelJump(){
         Scanner in = new Scanner(System.in);
         System.out.println("(Tupai) Berada di Posisi " + posisiTupai);
         for(int i = 1; i <= kesempatan; i++){
