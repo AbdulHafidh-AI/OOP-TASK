@@ -131,7 +131,7 @@ public class Pemain{
     }
     /**
      * Sebuah method untuk mengembalikan nilai String sesuai kondisi pada percabangan di dalam method ini
-     * @return kalimat + this.arah;
+     * @return kalimat + this.arah
      */
     public String getArahLompat(){
         String kalimat;
