@@ -24,13 +24,6 @@ public class Pemain{
         this.posisiTupai = (int)(min + Math.random() * (max - min));
     }
     /**
-     * Sebuah method constructor untuk menginisialisasi variabel nama
-     * @param nama
-     */
-    public Pemain(String nama){
-        this.nama = nama;
-    }
-    /**
      * Sebuah method untuk mengembalikan nilai string
      * @return "Nama Tupai adalah : " + this.nama
      */
