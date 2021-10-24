@@ -114,7 +114,8 @@ public class Pemain{
             System.out.println("[" +"Tupai anda bewarna: " + warna + "]"); 
         }
     /**
-     * Sebuah method mutator untuk merayakan ucapan yang menang atau kalah
+     * Sebuah method accessor untuk mengembalikan nilai dari String reward sesuai kondisi
+     * @return reward;
      */
     public String getReward(){
         String reward;
@@ -133,7 +134,7 @@ public class Pemain{
         this.arah = arah;
     }
     /**
-     * Sebuah method untuk m
+     * Sebuah method untuk mengembalikan nilai String sesuai kondisi pada percabangan di dalam method ini
      * @return kalimat + this.arah;
      */
     public String getArahLompat(){
