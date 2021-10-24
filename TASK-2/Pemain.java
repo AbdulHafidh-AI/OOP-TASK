@@ -111,7 +111,7 @@ public class Pemain{
         }
     /**
      * Sebuah method accessor untuk mengembalikan nilai dari String reward sesuai kondisi
-     * @return reward;
+     * @return reward
      */
     public String getReward(){
         String reward;
