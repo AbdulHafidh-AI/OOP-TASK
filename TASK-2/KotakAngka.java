@@ -62,7 +62,7 @@ public class KotakAngka{
         return this.jumTupai;
     }
     /**
-     * Sebuah method toString untuk mencetak hasil output yang diinginkan
+     * Sebuah method toString untuk mengembalikan string yang ditentukan dan hasil pada variabel this.jumTupai
      * @return "Tupainya berjumlah " + this.jumTupai
      */
     public String toString(){
