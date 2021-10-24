@@ -1,6 +1,7 @@
 import java.util.Scanner;
 /**
  * Sebuah class yang berisi method public static void main(String[] args) yang bertujuan untuk memberikan output kepada user
+ * Berikut ini adalah link Gdrive untuk penjelasan pada source code ini: https://drive.google.com/file/d/1zfqcbtrHLgQbhnwFBg1AYnNhxgyL_1O3/view?usp=sharing
  * @author Abdul Hafidh
  * @version 2021.10.12
  */

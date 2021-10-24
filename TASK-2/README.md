@@ -5,3 +5,6 @@ Tugas 2 kali ini adalah membuat permainan jump squirrel jump dengan memakai kons
 
 Pada permainan ini tupai hanya bisa melompat ke satu kotak yang bersisian, akan tetapi pemain hanya bisa menebak tergantung letak posisi tupai
 Misalkan posisi tupai dibawah 50 maka pemain hanya boleh menebak sebanyak 20 kali, dan jika posisi tupai diatas atau sama dengan 50 maka pemain hanya boleh menebak sebanyak 10 kali.
+
+Berikut ini adalah link Grive dalam membahas isi source code ini:
+https://drive.google.com/file/d/1zfqcbtrHLgQbhnwFBg1AYnNhxgyL_1O3/view?usp=sharing
