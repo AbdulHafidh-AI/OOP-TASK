@@ -37,7 +37,10 @@ public class Pemain{
     public String getNama(){
         return "Nama kamu adalah : " + this.nama;
     }
-
+    /**
+     * Sebuah method setter untuk mengatur nama yang di inginkan oleh pemain
+     * @param nama
+     */
     public void setNama(String nama){
         this.nama = nama;
     }
