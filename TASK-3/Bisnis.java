@@ -1,5 +1,5 @@
 /**
- * 
+ * Sebuah class 
  * @author Abdul Hafidh
  * @version 2021.11.02
  */
@@ -16,6 +16,9 @@ public class Bisnis extends Tabungan{
      * @param saldoAwal
      */
     public Bisnis(String nama, long noRek, double saldoAwal){
-
+        super();
+        super.setSaldoMinimum(SALDO_MINIMUM);
+        super.setSetoranMinimum(SETORAN_MINIMUM);
+        super.setSaldo(saldoAwal);
     }
 }

@@ -12,14 +12,14 @@ public class Tabungan  {
     private double setoran_minimum = 0;
 
     /**
-     * 
+     * Sebuah method constructor di class Tabungan tanpa adanya parameter
      */
     public Tabungan(){
-
+        
     }
 
     /**
-     * 
+     * Sebuah method constructor yang diberi parameter dengan nama, dan noRekening
      * @param nama
      * @param noRekening
      */
@@ -29,35 +29,35 @@ public class Tabungan  {
     }
 
      /**
-      * 
+      * Sebuah method untuk mengeset nilai dari saldo_minimum
       * @param saldo_minimum
       */
     protected void setSaldoMinimum(double saldo_minimum){
-
+        this.saldo_minimum = saldo_minimum;
     }
     /**
-     * 
+     * Sebuah method setter untuk mengeset nilai setoran_minimum
      * @param setoran_minimum
      */
     protected void setSetoranMinimum(double setoran_minimum){
         this.setoran_minimum = setoran_minimum;
     }
     /**
-     * 
+     * Sebuah method getter untuk mendapatkan nilai dari saldo
      * @return
      */
     public double getSaldo(){
         return saldo;
     }
     /**
-     * 
+     * Sebuah method setter untuk mengeset nilai dari saldo yang dimasukkan
      * @param saldo
      */
     public void setSaldo(double saldo){
         this.saldo = saldo;
     }
     /**
-     * 
+     * Sebuah method untuk mengecek apakah nasabah atau pengguna dapat menyimpan uang
      * @param uang
      */
     public void simpanUang(double uang){
@@ -76,6 +76,8 @@ public class Tabungan  {
         double sisaPenarikan = jumlahPenarikan - saldo;
         if(jumlahPenarikan < 0 || jumlahPenarikan > this.saldo || sisaPenarikan < this.saldo_minimum){
             System.out.println("Maaf anda tidak boleh tarik uang");
+        }else{
+            System.out.println("Selamat anda boleh menarik uang");
         }
     }
 }
