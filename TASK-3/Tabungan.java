@@ -8,6 +8,7 @@ public class Tabungan  {
     private String nama;
     private long noRekening;
     private double saldo = 0;
+    private double saldo_minimum = 0;
     private double setoran_minimum = 0;
 
     /**
@@ -23,13 +24,9 @@ public class Tabungan  {
      * @param noRekening
      */
     public Tabungan(String nama, long noRekening){
-
+        this.nama = nama;
+        this.noRekening = noRekening;
     }
-
-    /**
-     * 
-     * @param saldo_minimum
-     */
 
      /**
       * 
@@ -43,7 +40,7 @@ public class Tabungan  {
      * @param setoran_minimum
      */
     protected void setSetoranMinimum(double setoran_minimum){
-
+        this.setoran_minimum = setoran_minimum;
     }
     /**
      * 
@@ -57,14 +54,18 @@ public class Tabungan  {
      * @param saldo
      */
     public void setSaldo(double saldo){
-
+        this.saldo = saldo;
     }
     /**
      * 
      * @param uang
      */
     public void simpanUang(double uang){
-
+        if(uang < this.setoran_minimum){
+            System.out.println("Maaf jumlah uang yang disetor kurang dari setoran minimum");
+        }else{
+            System.out.println("Alhamdulillah jumlah uang yang disetor tidak kurang dari setoran minimum");
+        }
     }
     
     /**
@@ -72,6 +73,9 @@ public class Tabungan  {
      * @param jumlahPenarikan
      */
     public void tarikUang(double jumlahPenarikan){
-
+        double sisaPenarikan = jumlahPenarikan - saldo;
+        if(jumlahPenarikan < 0 || jumlahPenarikan > this.saldo || sisaPenarikan < this.saldo_minimum){
+            System.out.println("Maaf anda tidak boleh tarik uang");
+        }
     }
 }
