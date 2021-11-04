@@ -98,6 +98,7 @@ public class Pemain{
                 }  
                 System.out.println("Anda sudah melakukan inputan sebanyak: " + i +" kali");   
         }
+        
         }   
         /**
          * Sebuah method mutator untuk membuat karakter tupai 
