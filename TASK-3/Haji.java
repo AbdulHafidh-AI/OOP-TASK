@@ -33,30 +33,47 @@ public class Haji extends Tabungan
     public void tarikUang(double jumlahPenarikan)
     {
         int i = 0;
-        try(Scanner in = new Scanner(System.in)){
-        do{
-        if(i > 0){
-            System.out.println("Berapakah uang yang anda ingin tarik: ");
+        String test;
+        String kalimat;
+        boolean kondisi = true;
+        Scanner input = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
+        while(kondisi){
+
+            do{
+            if(i > 0){
+                System.out.println("Berapakah uang yang anda ingin tarik: ");
+                jumlahPenarikan = in.nextInt();
+            }else{
+            System.out.print("Berapakah uang yang anda ingin tarik32: ");
             jumlahPenarikan = in.nextInt();
-        }
-        System.out.print("Berapakah uang yang anda ingin tarik: ");
-        jumlahPenarikan = in.nextInt();
-        if(jumlahPenarikan > super.getSaldo() * 10 / 100 && i == 0){
-            System.out.println("saran! jangan ambil dari 10 %");
-        }else if(jumlahPenarikan > super.getSaldo() * 10 / 100){
-
-        }else{
-
-        }
-           i++;
-          }while(jumlahPenarikan > super.getSaldo() * 10 / 100 && i == 0);
-        } catch (Exception e) {
-
-        }finally{
-
-        }
+            }
+            if(jumlahPenarikan > super.getSaldo() * 10 / 100 && i == 0){
+                System.out.println("saran! jangan ambil dari 10 %");
+                i++;
+            }else if(jumlahPenarikan > super.getSaldo() * 10 / 100){
+                System.out.println("Karena anda terlalu marok maka lebih baik setiap pengambilan ini uang anda akan dipotong 50 rb hahahha");
+                i++;
+            }else{
+                System.out.println("karena kurang dari 10 persen dari total saldo maka tidak akan ada pengurangan");
+            }
+    
+              }while((jumlahPenarikan > super.getSaldo() * 10 / 100) && (i == 1));
+    
+              System.out.println("Apakah anda ingin menarik uang lagi?: ");
+              kalimat = input.nextLine();
+    
+              if(kalimat.equalsIgnoreCase("y")){
+                 kondisi = true;
+              }else{
+                 kondisi = false;
+              }
+            
+            }
         
-        
+        // Menutup Inputan
+        input.close();
+        in.close();
     }
 
 }
