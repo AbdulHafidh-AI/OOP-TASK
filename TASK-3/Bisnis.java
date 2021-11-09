@@ -11,7 +11,7 @@ public class Bisnis extends Tabungan
     private double SETORAN_MINIMUM = 50000;
 
     /**
-     * 
+     * Sebuah method constructor di class bisnis dengan adanya 3 parameter yang dimana isinya terdapat kata kunci super untuk memanggil super constructor, mengeset saldo minimum, setoran minimum dan saldo
      * @param nama
      * @param noRek
      * @param saldoAwal
@@ -21,7 +21,6 @@ public class Bisnis extends Tabungan
         super();
         super.setSaldoMinimum(SALDO_MINIMUM);
         super.setSetoranMinimum(SETORAN_MINIMUM);
-        super.setSaldo(saldoAwal);
-        
+        super.setSaldo(saldoAwal); 
     }
 }

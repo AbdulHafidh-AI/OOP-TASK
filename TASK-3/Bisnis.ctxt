@@ -3,5 +3,5 @@ comment0.target=Bisnis
 comment0.text=\r\n\ Sebuah\ class\ turunan\ dari\ class\ tabungan\r\n\ @author\ Abdul\ Hafidh\r\n\ @version\ 2021.11.02\r\n
 comment1.params=nama\ noRek\ saldoAwal
 comment1.target=Bisnis(java.lang.String,\ long,\ double)
-comment1.text=\r\n\ \r\n\ @param\ nama\r\n\ @param\ noRek\r\n\ @param\ saldoAwal\r\n
+comment1.text=\r\n\ Sebuah\ method\ constructor\ di\ class\ bisnis\ dengan\ adanya\ 3\ parameter\ yang\ dimana\ isinya\ terdapat\ kata\ kunci\ super\ untuk\ memanggil\ super\ constructor,\ mengeset\ saldo\ minimum,\ setoran\ minimum\ dan\ saldo\r\n\ @param\ nama\r\n\ @param\ noRek\r\n\ @param\ saldoAwal\r\n
 numComments=2

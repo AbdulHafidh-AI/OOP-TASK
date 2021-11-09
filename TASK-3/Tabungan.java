@@ -1,9 +1,10 @@
+import java.util.Scanner;
 /**
  * Sebuah class yang terdapat informasi dari si penabung
  * @author Abdul Hafidh
  * @version 2021.11.02
  */
-public class Tabungan
+abstract class Tabungan
 {
     // Fields
     private String nama;
@@ -17,9 +18,7 @@ public class Tabungan
      */
     public Tabungan()
     {
-        saldo = 0;
-        saldo_minimum = 0;
-        setoran_minimum = 0;
+        
     }
 
     /**
@@ -66,16 +65,24 @@ public class Tabungan
         this.saldo = saldo;
     }
     /**
-     * Sebuah method untuk mengecek apakah nasabah atau pengguna dapat menyimpan uang
+     * Sebuah method untuk mengecek jumlah uang minimal yang disetor agar tidak kurang dari setoran minimum
      * @param uang
      */
     public void simpanUang(double uang)
     {
+        try(Scanner in = new Scanner(System.in)){
+        do{
+            System.out.print("Masukkan jumlah uang yang ingin anda setor: ");
         if(uang < this.setoran_minimum){
             System.out.println("Maaf jumlah uang yang disetor kurang dari setoran minimum");
         }else{
             System.out.println("Alhamdulillah jumlah uang yang disetor tidak kurang dari setoran minimum");
         }
+          }while(uang < this.setoran_minimum);
+        }catch (Exception e){
+            //TODO: handle exception
+        }
+
     }
     
     /**
