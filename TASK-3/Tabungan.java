@@ -31,22 +31,34 @@ abstract class Tabungan
         this.nama = nama;
         this.noRekening = noRekening;
     }
-
+    /**
+     * 
+     * @param nama
+     */
     public void setNama(String nama)
     {
         this.nama = nama;
     }
-
+    /**
+     * 
+     * @return this.nama
+     */
     public String getNama()
     {
         return this.nama;
     }
-
+    /**
+     * 
+     * @param noRek
+     */
     public void setNoRekening(long noRek)
     {
         this.noRekening = noRek;
     }
-
+    /**
+     * 
+     * @return this.noRekening
+     */
     public long getNoRekening()
     {
         return this.noRekening;
@@ -90,19 +102,19 @@ abstract class Tabungan
      */
     public void simpanUang(double uang)
     {
-        try(Scanner in = new Scanner(System.in)){
+        Scanner in = new Scanner(System.in);
         do{
             System.out.print("Masukkan jumlah uang yang ingin anda setor: ");
+            uang = in.nextDouble();
         if(uang < this.setoran_minimum){
             System.out.println("Maaf jumlah uang yang disetor kurang dari setoran minimum");
+            System.out.println("Silahkan input ulang");
         }else{
             System.out.println("Alhamdulillah jumlah uang yang disetor tidak kurang dari setoran minimum");
         }
           }while(uang < this.setoran_minimum);
-        }catch (Exception e){
-            //TODO: handle exception
-        }
-
+          
+          
     }
     
     /**
