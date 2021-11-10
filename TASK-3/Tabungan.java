@@ -32,6 +32,26 @@ abstract class Tabungan
         this.noRekening = noRekening;
     }
 
+    public void setNama(String nama)
+    {
+        this.nama = nama;
+    }
+
+    public String getNama()
+    {
+        return this.nama;
+    }
+
+    public void setNoRekening(long noRek)
+    {
+        this.noRekening = noRek;
+    }
+
+    public long getNoRekening()
+    {
+        return this.noRekening;
+    }
+
      /**
       * Sebuah method untuk mengeset nilai dari saldo_minimum
       * @param saldo_minimum

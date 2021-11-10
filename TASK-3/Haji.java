@@ -19,10 +19,12 @@ public class Haji extends Tabungan
      */
     public Haji(String nama, long noRek, double saldoAwal)
     {
-        super();
+        super(nama,noRek);
         super.setSaldoMinimum(SALDO_MINIMUM);
         super.setSetoranMinimum(SETORAN_MINIMUM);
+        if(saldoAwal < SALDO_AWAL_MINIMUM){
         super.setSaldo(saldoAwal);
+        }
     }
     
     /**
@@ -33,11 +35,11 @@ public class Haji extends Tabungan
     public void tarikUang(double jumlahPenarikan)
     {
         int i = 0;
-        String test;
         String kalimat;
         boolean kondisi = true;
         Scanner input = new Scanner(System.in);
         Scanner in = new Scanner(System.in);
+        double saldoSekarang = super.getSaldo();
         while(kondisi){
 
             do{
@@ -45,20 +47,21 @@ public class Haji extends Tabungan
                 System.out.println("Berapakah uang yang anda ingin tarik: ");
                 jumlahPenarikan = in.nextInt();
             }else{
-            System.out.print("Berapakah uang yang anda ingin tarik32: ");
+            System.out.print("Berapakah uang yang anda ingin tarik: ");
             jumlahPenarikan = in.nextInt();
             }
-            if(jumlahPenarikan > super.getSaldo() * 10 / 100 && i == 0){
+            if(jumlahPenarikan > saldoSekarang * 10 / 100 && i == 0){
                 System.out.println("saran! jangan ambil dari 10 %");
                 i++;
-            }else if(jumlahPenarikan > super.getSaldo() * 10 / 100){
+            }else if(jumlahPenarikan > saldoSekarang * 10 / 100){
                 System.out.println("Karena anda terlalu marok maka lebih baik setiap pengambilan ini uang anda akan dipotong 50 rb hahahha");
+                saldoSekarang = super.getSaldo() -  50000;
                 i++;
             }else{
                 System.out.println("karena kurang dari 10 persen dari total saldo maka tidak akan ada pengurangan");
             }
     
-              }while((jumlahPenarikan > super.getSaldo() * 10 / 100) && (i == 1));
+              }while((jumlahPenarikan > saldoSekarang * 10 / 100) && (i == 1));
     
               System.out.println("Apakah anda ingin menarik uang lagi?: ");
               kalimat = input.nextLine();

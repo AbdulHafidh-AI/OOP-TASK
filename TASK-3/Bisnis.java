@@ -18,9 +18,11 @@ public class Bisnis extends Tabungan
      */
     public Bisnis(String nama, long noRek, double saldoAwal)
     {
-        super();
+        super(nama,noRek);
         super.setSaldoMinimum(SALDO_MINIMUM);
         super.setSetoranMinimum(SETORAN_MINIMUM);
-        super.setSaldo(saldoAwal); 
+        if(saldoAwal < SALDO_AWAL_MINIMUM){
+            super.setSaldo(saldoAwal);
+        }
     }
 }
