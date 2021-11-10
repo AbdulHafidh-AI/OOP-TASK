@@ -22,7 +22,7 @@ public class Haji extends Tabungan
         super(nama,noRek);
         super.setSaldoMinimum(SALDO_MINIMUM);
         super.setSetoranMinimum(SETORAN_MINIMUM);
-        if(saldoAwal < SALDO_AWAL_MINIMUM){
+        if(saldoAwal > SALDO_AWAL_MINIMUM){
         super.setSaldo(saldoAwal);
         }
     }
@@ -37,34 +37,39 @@ public class Haji extends Tabungan
         int i = 0;
         String kalimat;
         boolean kondisi = true;
-        Scanner input = new Scanner(System.in);
-        Scanner in = new Scanner(System.in);
+        Scanner inputKata = new Scanner(System.in);
+        Scanner inputAngka = new Scanner(System.in);
         double saldoSekarang = super.getSaldo();
-        while(kondisi){
 
+        System.out.printf("Sebelum perulangan saldonya berjumlah %f \n", saldoSekarang);
+        while(kondisi){
+            i = 0;
+            System.out.printf("Total Saldo Anda Adalah : %f \n",saldoSekarang);
             do{
             if(i > 0){
                 System.out.println("Berapakah uang yang anda ingin tarik: ");
-                jumlahPenarikan = in.nextInt();
+                jumlahPenarikan = inputAngka.nextDouble();
             }else{
             System.out.print("Berapakah uang yang anda ingin tarik: ");
-            jumlahPenarikan = in.nextInt();
+            jumlahPenarikan = inputAngka.nextDouble();
             }
             if(jumlahPenarikan > saldoSekarang * 10 / 100 && i == 0){
                 System.out.println("saran! jangan ambil dari 10 %");
                 i++;
             }else if(jumlahPenarikan > saldoSekarang * 10 / 100){
                 System.out.println("Karena anda terlalu marok maka lebih baik setiap pengambilan ini uang anda akan dipotong 50 rb hahahha");
-                saldoSekarang = super.getSaldo() -  50000;
+                saldoSekarang = saldoSekarang - jumlahPenarikan;
+                saldoSekarang = saldoSekarang -  50000;
                 i++;
             }else{
                 System.out.println("karena kurang dari 10 persen dari total saldo maka tidak akan ada pengurangan");
+                saldoSekarang = saldoSekarang - jumlahPenarikan;
             }
     
               }while((jumlahPenarikan > saldoSekarang * 10 / 100) && (i == 1));
     
-              System.out.println("Apakah anda ingin menarik uang lagi?: ");
-              kalimat = input.nextLine();
+              System.out.println("Apakah anda ingin menarik uang untuk kebutuhan haji lagi?: ");
+              kalimat = inputKata.nextLine();
     
               if(kalimat.equalsIgnoreCase("y")){
                  kondisi = true;
@@ -74,9 +79,7 @@ public class Haji extends Tabungan
             
             }
         
-        // Menutup Inputan
-        input.close();
-        in.close();
+        
     }
 
 }

@@ -14,13 +14,15 @@ public class TestTabungan
         String kalimat;
         long noRek;
         double saldoAwal = 0;
+        double jumlahPenarikan = 0;
         boolean condition = true;
 
-        // Membuat 4 method scanner
+        // Membuat 5 method scanner
         Scanner inputLagi = new Scanner(System.in);
         Scanner in = new Scanner(System.in);
         Scanner inputNama = new Scanner(System.in);
         Scanner inputNoRek = new Scanner(System.in);
+     
 
 
         while (condition) {
@@ -29,7 +31,8 @@ public class TestTabungan
         
         System.out.println("================== SELAMAT DATANG DI APLIKASI TABUNGAN SEDERHANA ================");
         System.out.println("Berikut ini adalah menu yang tersedia di aplikasi tabungan sederhana ini");
-        String menu = """
+        String menu = 
+        """
        |===========     MENU      ==============|
        |===========  1. Bisnis    ==============|
        |===========  2. Haji      ==============|
@@ -59,10 +62,14 @@ public class TestTabungan
         switch (pilihan){
             case 1:
              // Inisialisasi variabel untuk Menu Bisnis
+             System.out.println("==== FITUR BISNIS ====");
+             System.out.println("SALDO AWAL TIDAK BOLEH KURANG DARI 1000000");
              objekBisnis.simpanUang(saldoAwal);
+             
                 break;
             case 2:
             objekHaji.simpanUang(saldoAwal);
+            objekHaji.tarikUang(jumlahPenarikan);
                 break;
         
             default:
@@ -70,7 +77,7 @@ public class TestTabungan
                 break;
         }
         
-            System.out.println("Apakah anda ingin menarik uang lagi?: ");
+            System.out.println("Apakah anda ingin mencoba Aplikasi ini lagi  (Y/N) ?: ");
             kalimat = inputLagi.nextLine();
    
             if(kalimat.equalsIgnoreCase("y")){
