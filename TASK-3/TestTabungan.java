@@ -69,16 +69,17 @@ public class TestTabungan
             System.out.println("Maaf pilihan yang anda masukkan tidak tersedia");
                 break;
         }
-
-
-         System.out.println("Apakah anda ingin menarik uang lagi?: ");
-         kalimat = inputLagi.nextLine();
-
-         if(kalimat.equalsIgnoreCase("y")){
-            condition = true;
-         }else{
-            condition = false;
-         }
+        
+            System.out.println("Apakah anda ingin menarik uang lagi?: ");
+            kalimat = inputLagi.nextLine();
+   
+            if(kalimat.equalsIgnoreCase("y")){
+               condition = true;
+            }else{
+               condition = false;
+            }
+       
+        
        
          
 
