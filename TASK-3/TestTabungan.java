@@ -22,6 +22,7 @@ public class TestTabungan
         Scanner in = new Scanner(System.in);
         Scanner inputNama = new Scanner(System.in);
         Scanner inputNoRek = new Scanner(System.in);
+        Scanner inputSaldoAwal = new Scanner(System.in);
      
 
 
@@ -51,9 +52,9 @@ public class TestTabungan
         System.out.print("Masukkan no rekening anda: ");
         noRek = in.nextLong();
 
-        // Scanner inputSaldoAwal = new Scanner(System.in);
-        // System.out.print("Input saldo awal anda: ");
-        // saldoAwal = in.nextDouble();
+       
+        System.out.print("Input saldo awal anda: ");
+        saldoAwal = in.nextDouble();
 
          // Membuat objek
          Bisnis objekBisnis = new Bisnis(nama, noRek, saldoAwal);
@@ -64,10 +65,20 @@ public class TestTabungan
              // Inisialisasi variabel untuk Menu Bisnis
              System.out.println("==== FITUR BISNIS ====");
              System.out.println("SALDO AWAL TIDAK BOLEH KURANG DARI 1000000");
+             do{
+             if(saldoAwal > 1000000){
+             objekBisnis.setNama(nama);
+             objekBisnis.setNoRekening(noRek);
              objekBisnis.simpanUang(saldoAwal);
-             
+             objekBisnis.tarikUang(jumlahPenarikan);
+             }else{
+                 System.out.println("MAAF SALDO AWAL ANDA KURANG DARI MINIMUM, TOLONG INPUT KEMBALI");
+             }
+            }while(saldoAwal > 1000000);
                 break;
             case 2:
+            objekHaji.setNama(nama);
+            objekHaji.setNoRekening(noRek);
             objekHaji.simpanUang(saldoAwal);
             objekHaji.tarikUang(jumlahPenarikan);
                 break;
@@ -91,11 +102,12 @@ public class TestTabungan
          
 
         }
-          // Menutup Inputan
+          // Memanggil method close untuk menutup inputan
           in.close();
           inputLagi.close();
           inputNama.close();
           inputNoRek.close();
+          inputSaldoAwal.close();
           
        
        

@@ -37,11 +37,16 @@ public class Haji extends Tabungan
         int i = 0;
         String kalimat;
         boolean kondisi = true;
+        try {
+            
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
         Scanner inputKata = new Scanner(System.in);
         Scanner inputAngka = new Scanner(System.in);
         double saldoSekarang = super.getSaldo();
 
-        System.out.printf("Sebelum perulangan saldonya berjumlah %f \n", saldoSekarang);
+            System.out.printf("Sebelum perulangan saldonya berjumlah %f \n", saldoSekarang);
         while(kondisi){
             i = 0;
             System.out.printf("Total Saldo Anda Adalah : %f \n",saldoSekarang);
@@ -68,7 +73,7 @@ public class Haji extends Tabungan
     
               }while((jumlahPenarikan > saldoSekarang * 10 / 100) && (i == 1));
     
-              System.out.println("Apakah anda ingin menarik uang untuk kebutuhan haji lagi?: ");
+              System.out.println("Apakah anda ingin menarik uang untuk kebutuhan haji lagi (Y/N)?: ");
               kalimat = inputKata.nextLine();
     
               if(kalimat.equalsIgnoreCase("y")){
@@ -78,7 +83,6 @@ public class Haji extends Tabungan
               }
             
             }
-        
         
     }
 

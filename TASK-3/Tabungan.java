@@ -103,19 +103,18 @@ abstract class Tabungan
     public void simpanUang(double uang)
     {
         Scanner inputKalimat = new Scanner(System.in);
-        do{
-            System.out.print("Masukkan jumlah uang yang ingin anda simpan: ");
-            uang = inputKalimat.nextDouble();
-        if(uang < this.setoran_minimum){
-            System.out.println("Maaf jumlah uang yang ingin disimpan kurang dari setoran minimum");
-            System.out.println("Silahkan input ulang!");
-        }else{
-            System.out.println("Alhamdulillah jumlah uang yang disetor tidak kurang dari setoran minimum");
-            System.out.printf("Uang anda sekarang berjumlah   %f\n",uang );
-        }
-          }while(uang < this.setoran_minimum);
-          this.saldo = uang;
-          
+            do{
+                System.out.print("Masukkan jumlah uang yang ingin anda simpan: ");
+                uang = inputKalimat.nextDouble();
+            if(uang < this.setoran_minimum){
+                System.out.println("Maaf jumlah uang yang ingin disimpan kurang dari setoran minimum");
+                System.out.println("Silahkan input ulang!");
+            }else{
+                System.out.println("Alhamdulillah jumlah uang yang disetor tidak kurang dari setoran minimum");
+                System.out.printf("Uang anda sekarang berjumlah   %f\n",uang );
+            }
+              }while(uang < this.setoran_minimum);
+              this.saldo = uang;
           
     }
     
