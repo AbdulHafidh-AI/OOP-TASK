@@ -23,6 +23,7 @@ public class TestTabungan
         Scanner inputNama = new Scanner(System.in);
         Scanner inputNoRek = new Scanner(System.in);
         Scanner inputSaldoAwal = new Scanner(System.in);
+        Scanner inputTarikUang = new Scanner(System.in);
      
 
 
@@ -64,25 +65,18 @@ public class TestTabungan
             case 1:
              // Inisialisasi variabel untuk Menu Bisnis
              System.out.println("==== FITUR BISNIS ====");
-             System.out.println("SALDO AWAL TIDAK BOLEH KURANG DARI 1000000");
-             do{
-             if(saldoAwal > 1000000){
-             objekBisnis.setNama(nama);
-             objekBisnis.setNoRekening(noRek);
-             objekBisnis.simpanUang(saldoAwal);
-             objekBisnis.tarikUang(jumlahPenarikan);
-             }else{
-                 System.out.println("MAAF SALDO AWAL ANDA KURANG DARI MINIMUM, TOLONG INPUT KEMBALI");
-             }
-            }while(saldoAwal > 1000000);
-                break;
+             System.out.println(" SALDO AWAL TIDAK BOLEH KURANG DARI 1000000 ");
+             System.out.println("======================  STATUS PENARIKAN DANA BISNIS ==========================");
+             System.out.println(objekBisnis.getNama());
+             System.out.println(objekBisnis.getNoRekening());
+             break;
             case 2:
-            objekHaji.setNama(nama);
-            objekHaji.setNoRekening(noRek);
-            objekHaji.simpanUang(saldoAwal);
-            objekHaji.tarikUang(jumlahPenarikan);
+            System.out.println("==== FITUR HAJI ====");
+            System.out.println(" SALDO AWAL TIDAK BOLEH KURANG DARI 500000 ");
+            System.out.println("======================  STATUS PENARIKAN DANA HAJI ==========================");
+            System.out.println("NAMA : " + objekHaji.getNama());
+            System.out.println("NO REK ANDA: " + objekHaji.getNoRekening());
                 break;
-        
             default:
             System.out.println("Maaf pilihan yang anda masukkan tidak tersedia");
                 break;
@@ -96,18 +90,15 @@ public class TestTabungan
             }else{
                condition = false;
             }
-       
-        
-       
-         
-
         }
+           System.out.println("================================ TERIMA KASIH TELAH MENGGUNAKAN APLIKASI KAMI ================================");
           // Memanggil method close untuk menutup inputan
           in.close();
           inputLagi.close();
           inputNama.close();
           inputNoRek.close();
           inputSaldoAwal.close();
+          inputTarikUang.close();
           
        
        
@@ -115,4 +106,5 @@ public class TestTabungan
     }
 
 }
+
 

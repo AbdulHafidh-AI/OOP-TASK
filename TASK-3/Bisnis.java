@@ -23,8 +23,6 @@ public class Bisnis extends Tabungan
         super.setSetoranMinimum(SETORAN_MINIMUM);
         if(saldoAwal > SALDO_AWAL_MINIMUM){
             super.setSaldo(saldoAwal);
-        }else{
-            super.setSaldo(0);
         }
     }
 }

@@ -31,14 +31,8 @@ abstract class Tabungan
         this.nama = nama;
         this.noRekening = noRekening;
     }
-    /**
-     * 
-     * @param nama
-     */
-    public void setNama(String nama)
-    {
-        this.nama = nama;
-    }
+   
+   
     /**
      * 
      * @return this.nama
@@ -47,14 +41,7 @@ abstract class Tabungan
     {
         return this.nama;
     }
-    /**
-     * 
-     * @param noRek
-     */
-    public void setNoRekening(long noRek)
-    {
-        this.noRekening = noRek;
-    }
+    
     /**
      * 
      * @return this.noRekening
@@ -124,11 +111,18 @@ abstract class Tabungan
      */
     public void tarikUang(double jumlahPenarikan)
     {
-        double sisaPenarikan = jumlahPenarikan - saldo;
+        double sisaPenarikan = jumlahPenarikan - this.saldo;
         if(jumlahPenarikan < 0 || jumlahPenarikan > this.saldo || sisaPenarikan < this.saldo_minimum){
             System.out.println("Maaf anda tidak boleh tarik uang");
         }else{
             System.out.println("Selamat anda boleh menarik uang");
+
+            System.out.println("=========== STRUK PENARIKAN ===========");
+            System.out.println("Nama Penarik : " + this.nama);
+            System.out.println("No rekening : " + this.noRekening);
+            System.out.println("Jumlah yang ditarik : " + jumlahPenarikan);
+            System.out.println("Total saldo sekarang : " + this.saldo);
+            System.out.println("========================================");
         }
     }
 }
