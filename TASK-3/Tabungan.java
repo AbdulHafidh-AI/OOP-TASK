@@ -98,10 +98,9 @@ abstract class Tabungan
                 System.out.println("Silahkan input ulang!");
             }else{
                 System.out.println("Alhamdulillah jumlah uang yang disetor tidak kurang dari setoran minimum");
-                System.out.printf("Uang anda sekarang berjumlah   %f\n",uang );
             }
               }while(uang < this.setoran_minimum);
-              this.saldo = uang;
+              setSaldo(uang);
           
     }
     
@@ -116,13 +115,8 @@ abstract class Tabungan
             System.out.println("Maaf anda tidak boleh tarik uang");
         }else{
             System.out.println("Selamat anda boleh menarik uang");
-
-            System.out.println("=========== STRUK PENARIKAN ===========");
-            System.out.println("Nama Penarik : " + this.nama);
-            System.out.println("No rekening : " + this.noRekening);
-            System.out.println("Jumlah yang ditarik : " + jumlahPenarikan);
-            System.out.println("Total saldo sekarang : " + this.saldo);
-            System.out.println("========================================");
         }
+        double saldoSekarang = getSaldo() - jumlahPenarikan;
+        setSaldo(saldoSekarang);
     }
 }

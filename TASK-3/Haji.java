@@ -22,7 +22,7 @@ public class Haji extends Tabungan
         super(nama,noRek);
         super.setSaldoMinimum(SALDO_MINIMUM);
         super.setSetoranMinimum(SETORAN_MINIMUM);
-        if(saldoAwal > SALDO_AWAL_MINIMUM){
+        if(saldoAwal >= SALDO_AWAL_MINIMUM){
         super.setSaldo(saldoAwal);
         }
     }
@@ -37,11 +37,6 @@ public class Haji extends Tabungan
         int i = 0;
         String kalimat;
         boolean kondisi = true;
-        try {
-            
-        } catch (Exception e) {
-            //TODO: handle exception
-        }
         Scanner inputKata = new Scanner(System.in);
         Scanner inputAngka = new Scanner(System.in);
         double saldoSekarang = super.getSaldo();
@@ -62,7 +57,7 @@ public class Haji extends Tabungan
                 System.out.println("saran! jangan ambil dari 10 %");
                 i++;
             }else if(jumlahPenarikan > saldoSekarang * 10 / 100){
-                System.out.println("Karena anda terlalu marok maka lebih baik setiap pengambilan ini uang anda akan dipotong 50 rb hahahha");
+                System.out.println("Karena anda mengambil lebih dari 10 persen maka akan ada pemotongan 50 ribu setiap pengambilan");
                 saldoSekarang = saldoSekarang - jumlahPenarikan;
                 saldoSekarang = saldoSekarang -  50000;
                 i++;
