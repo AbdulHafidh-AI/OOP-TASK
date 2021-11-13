@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=TestTabungan
+comment0.text=\r\n\ Sebuah\ class\ yang\ berisi\ method\ main\ yang\ bertujuan\ untuk\ menjalankan\ output\r\n\ @author\ Abdul\ Hafidh\r\n\ @version\ 2021.11.02\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ Sebuah\ method\ main\ yang\ bertujuan\ untuk\ melakukan\ operasi\ input\ dan\ output\r\n\ @param\ args\r\n
+numComments=2

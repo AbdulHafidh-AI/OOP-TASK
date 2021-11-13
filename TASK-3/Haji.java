@@ -1,6 +1,6 @@
 import java.util.Scanner;
 /**
- * Sebuah class turunan dari class tabungan 
+ * Sebuah class yang merupakan turunan dari class tabungan untuk penyimpanan atau penarikan pada dana haji
  * @author Abdul Hafidh
  * @version 2021.11.02
  */
@@ -41,7 +41,7 @@ public class Haji extends Tabungan
         Scanner inputAngka = new Scanner(System.in);
         double saldoSekarang = super.getSaldo();
 
-            System.out.printf("Sebelum perulangan saldonya berjumlah %f \n", saldoSekarang);
+            
         while(kondisi){
             i = 0;
             System.out.printf("Total Saldo Anda Adalah : %f \n",saldoSekarang);
@@ -68,7 +68,7 @@ public class Haji extends Tabungan
     
               }while((jumlahPenarikan > saldoSekarang * 10 / 100) && (i == 1));
     
-              System.out.println("Apakah anda ingin menarik uang untuk kebutuhan haji lagi (Y/N)?: ");
+              System.out.print("Apakah anda ingin menarik uang untuk kebutuhan haji lagi (Y/N)?: ");
               kalimat = inputKata.nextLine();
     
               if(kalimat.equalsIgnoreCase("y")){
@@ -76,8 +76,8 @@ public class Haji extends Tabungan
               }else{
                  kondisi = false;
               }
-            
             }
+             saldoSekarang = super.getSaldo() - jumlahPenarikan;
         
     }
 

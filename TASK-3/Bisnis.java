@@ -1,5 +1,5 @@
 /**
- * Sebuah class turunan dari class tabungan
+ * Sebuah class turunan dari class tabungan untuk penyimpanan atau penarikan pada dana bisnis
  * @author Abdul Hafidh
  * @version 2021.11.02
  */
