@@ -60,10 +60,12 @@ public class Haji extends Tabungan
                 System.out.println("Karena anda mengambil lebih dari 10 persen maka akan ada pemotongan 50 ribu setiap pengambilan");
                 saldoSekarang = saldoSekarang - jumlahPenarikan;
                 saldoSekarang = saldoSekarang -  50000;
+                super.setSaldo(saldoSekarang);
                 i++;
             }else{
                 System.out.println("karena kurang dari 10 persen dari total saldo maka tidak akan ada pengurangan");
                 saldoSekarang = saldoSekarang - jumlahPenarikan;
+                super.setSaldo(saldoSekarang);
             }
     
               }while((jumlahPenarikan > saldoSekarang * 10 / 100) && (i == 1));
@@ -77,7 +79,7 @@ public class Haji extends Tabungan
                  kondisi = false;
               }
             }
-             saldoSekarang = super.getSaldo() - jumlahPenarikan;
+            super.setSaldo(saldoSekarang);
         
     }
 
