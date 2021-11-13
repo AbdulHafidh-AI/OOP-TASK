@@ -18,7 +18,7 @@ abstract class Tabungan
      */
     public Tabungan()
     {
-        
+
     }
 
     /**
@@ -110,12 +110,12 @@ abstract class Tabungan
      */
     public void tarikUang(double jumlahPenarikan)
     {
-        double sisaPenarikan = jumlahPenarikan - this.saldo;
+        double sisaPenarikan = this.saldo - jumlahPenarikan;
         if(jumlahPenarikan < 0 || jumlahPenarikan > this.saldo || sisaPenarikan < this.saldo_minimum){
             System.out.println("Maaf anda tidak boleh tarik uang");
         }else{
             System.out.println("Selamat anda bisa menarik uang");
-            double saldoSekarang = getSaldo() - jumlahPenarikan;
+            double saldoSekarang = this.saldo - jumlahPenarikan;
             setSaldo(saldoSekarang);
         }
         

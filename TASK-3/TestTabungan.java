@@ -111,7 +111,7 @@ public class TestTabungan
                  System.out.println("====================== STATUS PADA PENARIKAN DANA HAJI ==========================");
                  System.out.println("NAMA : " + objekHaji.getNama());
                  System.out.println("NO REK :" + objekHaji.getNoRekening());
-                 System.out.printf("Total Saldo untuk untuk simpanan haji anda berjumlah: %f ",objekHaji.getSaldo());
+                 System.out.printf("Total Saldo untuk untuk simpanan haji anda berjumlah: %f \n",objekHaji.getSaldo());
              }else{
                  System.out.println("MAAF PILIHAN YANG ANDA MASUKKAN TIDAK TERSEDIA! SILAHKAN COBA LAGI");
              }
