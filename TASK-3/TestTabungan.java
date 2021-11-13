@@ -57,13 +57,14 @@ public class TestTabungan
         switch (pilihan){
             case 1:
             if(saldoAwal > 1000000){
-            do{
-             System.out.println("==== TABUNGAN BISNIS ====");
-             System.out.println("PILIH APAKAH ANDA INGIN MENARIK ATAU MENYIMPAN UANG ? ");
-             System.out.println("1. simpan uang");
-             System.out.println("2. Tarik uang");
-             System.out.print("Tentukan pilihan anda: ");
-             pilihan = in.nextInt();
+                objekBisnis.setSaldo(0); // Dana pada tabungan bisnis dimulai dari nol terlebih dahulu
+                do{
+                 System.out.println("==== TABUNGAN BISNIS ====");
+                 System.out.println("PILIH APAKAH ANDA INGIN MENARIK ATAU MENYIMPAN UANG ? ");
+                 System.out.println("1. simpan uang");
+                 System.out.println("2. Tarik uang");
+                 System.out.print("Tentukan pilihan anda: ");
+                 pilihan = in.nextInt();
              if(pilihan == 1){
                  System.out.println("====================== STATUS PADA PENYIMPANAN DANA BISNIS ========================");
                  objekBisnis.simpanUang(uang);
@@ -90,23 +91,22 @@ public class TestTabungan
                 break;
             case 2:
             if(saldoAwal > 500000){
-            do{
-             System.out.println("==== TABUNGAN HAJI ====");
-             System.out.println("PILIH APAKAH ANDA INGIN MENARIK ATAU MENYIMPAN UANG ? ");
-             System.out.println("1. simpan uang");
-             System.out.println("2. Tarik uang");
-             System.out.print("Tentukan pilihan anda: ");
-             pilihan = in.nextInt();
+                objekBisnis.setSaldo(0); // Dana pada tabungan bisnis dimulai dari nol terlebih dahulu
+                do{
+                 System.out.println("==== TABUNGAN HAJI ====");
+                 System.out.println("PILIH APAKAH ANDA INGIN MENARIK ATAU MENYIMPAN UANG ? ");
+                 System.out.println("1. Simpan uang");
+                 System.out.println("2. Tarik uang");
+                 System.out.print("Tentukan pilihan anda: ");
+                 pilihan = in.nextInt();
              if(pilihan == 1){
                  System.out.println("====================== STATUS PADA PENYIMPANAN DANA HAJI ========================");
                  objekHaji.simpanUang(uang);
                  System.out.println("NAMA : " + objekHaji.getNama());
                  System.out.println("NO REK :" + objekHaji.getNoRekening());
-                 System.out.printf("Total Saldo untuk simpanan haji anda berjumlah: %f ",objekHaji.getSaldo());
+                 System.out.printf("Total Saldo untuk simpanan haji anda berjumlah: %f\n",objekHaji.getSaldo());
              }else if (pilihan == 2){
-                 System.out.println("SALDO ANDA SEKARANG BERJUMLAH : " + objekHaji.getSaldo());
-                 System.out.print("Masukkan jumlah uang yang ingin anda tarik : ");
-                 jumlahPenarikan = inputTarikUang.nextDouble();
+                 System.out.printf("SALDO ANDA SEKARANG BERJUMLAH : %f\n", objekHaji.getSaldo());
                  objekHaji.tarikUang(jumlahPenarikan);
                  System.out.println("====================== STATUS PADA PENARIKAN DANA HAJI ==========================");
                  System.out.println("NAMA : " + objekHaji.getNama());
@@ -123,7 +123,7 @@ public class TestTabungan
             }
                 break;
         }
-            System.out.println("Selamat anda sudah berhasil melakukan proses transaksi ^_^");
+            System.out.println("================================ TERIMA KASIH TELAH MENCOBA APLIKASI KAMI  ^_^ ============================================");
             System.out.print("Apakah anda ingin mencoba Aplikasi ini lagi  (Y/N) ?: ");
             kalimat = inputLagi.nextLine();
             if(kalimat.equalsIgnoreCase("y")){
