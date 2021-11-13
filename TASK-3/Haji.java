@@ -54,7 +54,7 @@ public class Haji extends Tabungan
             jumlahPenarikan = inputAngka.nextDouble();
             }
             if(jumlahPenarikan > saldoSekarang * 10 / 100 && i == 0){
-                System.out.println("saran! jangan ambil dari 10 %");
+                System.out.println("Disarankan untuk tidak mengambil lebih dari 10 persen!");
                 i++;
             }else if(jumlahPenarikan > saldoSekarang * 10 / 100){
                 System.out.println("Karena anda mengambil lebih dari 10 persen maka akan ada pemotongan 50 ribu setiap pengambilan");

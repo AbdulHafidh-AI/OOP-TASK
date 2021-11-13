@@ -114,9 +114,10 @@ abstract class Tabungan
         if(jumlahPenarikan < 0 || jumlahPenarikan > this.saldo || sisaPenarikan < this.saldo_minimum){
             System.out.println("Maaf anda tidak boleh tarik uang");
         }else{
-            System.out.println("Selamat anda boleh menarik uang");
+            System.out.println("Selamat anda bisa menarik uang");
+            double saldoSekarang = getSaldo() - jumlahPenarikan;
+            setSaldo(saldoSekarang);
         }
-        double saldoSekarang = getSaldo() - jumlahPenarikan;
-        setSaldo(saldoSekarang);
+        
     }
 }
