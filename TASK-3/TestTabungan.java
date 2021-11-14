@@ -154,7 +154,6 @@ public class TestTabungan
             }
                 break;
         }
-            clearScreen();
             System.out.println("================================ TERIMA KASIH TELAH MENCOBA APLIKASI KAMI  ^_^ ============================================");
             System.out.print("Apakah anda ingin mencoba Aplikasi ini lagi  (Y/N) ?: ");
             kalimat = inputLagi.nextLine();

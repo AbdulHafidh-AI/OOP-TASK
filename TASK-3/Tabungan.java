@@ -93,14 +93,15 @@ abstract class Tabungan
             do{
                 System.out.print("Masukkan jumlah uang yang ingin anda simpan: ");
                 uang = inputKalimat.nextDouble();
+                double uangSekarang = this.saldo = uang;
             if(uang < this.setoran_minimum){
                 System.out.println("Maaf jumlah uang yang ingin disimpan kurang dari setoran minimum");
                 System.out.println("Silahkan input ulang!");
             }else{
                 System.out.println("Alhamdulillah jumlah uang yang disetor tidak kurang dari setoran minimum");
+                setSaldo(uangSekarang);
             }
               }while(uang < this.setoran_minimum);
-              setSaldo(uang);
           
     }
     
