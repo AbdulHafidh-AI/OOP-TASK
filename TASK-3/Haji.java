@@ -44,7 +44,7 @@ public class Haji extends Tabungan
             
         while(kondisi){
             i = 0;
-            System.out.printf("Total Saldo Anda Adalah : %f \n",saldoSekarang);
+            System.out.printf("Total Saldo Anda Adalah : %.0f \n",saldoSekarang);
             do{
             if(i > 0){
                 System.out.println("Berapakah uang yang anda ingin tarik: ");

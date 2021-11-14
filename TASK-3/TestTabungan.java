@@ -31,6 +31,9 @@ public class TestTabungan
         Scanner inputTarikUang = new Scanner(System.in);
 
         while (condition) {
+        // Suatu manipulasi cara pada java untuk melakukan proses clear screen
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
         System.out.println("================== SELAMAT DATANG DI APLIKASI TABUNGAN SEDERHANA ================");
 
         System.out.print("Masukkan nama anda terlebih dahulu: ");
@@ -46,7 +49,7 @@ public class TestTabungan
         Bisnis objekBisnis = new Bisnis(nama, noRek, saldoAwal);
         Haji objekHaji = new Haji(nama, noRek, saldoAwal);
 
-        System.out.printf("Saldo anda sekarang berjumlah : %f\n", saldoAwal);
+        System.out.printf("Saldo anda sekarang berjumlah : %.0f\n", saldoAwal);
         System.out.println(" | Berikut ini adalah menu yang tersedia di aplikasi tabungan sederhana ini | ");
         System.out.println("|===========     MENU      ==============|");
         System.out.println("|===========  1. Bisnis    ==============|");
@@ -56,9 +59,15 @@ public class TestTabungan
 
         switch (pilihan){
             case 1:
+            // Suatu manipulasi cara pada java untuk melakukan proses clear screen
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
             if(saldoAwal > 1000000){
                 objekBisnis.setSaldo(0); // Dana pada tabungan bisnis dimulai dari nol terlebih dahulu
                 do{
+                 // Suatu manipulasi cara pada java untuk melakukan proses clear screen
+                 System.out.print("\033[H\033[2J");
+                 System.out.flush();
                  System.out.println("==== TABUNGAN BISNIS ====");
                  System.out.println("PILIH APAKAH ANDA INGIN MENARIK ATAU MENYIMPAN UANG ? ");
                  System.out.println("1. simpan uang");
@@ -66,19 +75,25 @@ public class TestTabungan
                  System.out.print("Tentukan pilihan anda: ");
                  pilihan = in.nextInt();
              if(pilihan == 1){
-                 System.out.println("====================== STATUS PADA PENYIMPANAN DANA BISNIS ========================");
+                 // Suatu manipulasi cara pada java untuk melakukan proses clear screen
+                 System.out.print("\033[H\033[2J");
+                 System.out.flush();
                  objekBisnis.simpanUang(uang);
+                 System.out.println("====================== STATUS PADA PENYIMPANAN DANA BISNIS ========================");
                  System.out.println("NAMA : " + objekBisnis.getNama());
                  System.out.println("NO REK :" + objekBisnis.getNoRekening());
-                 System.out.printf("Total Saldo untuk simpanan bisnis anda berjumlah: %f\n", objekBisnis.getSaldo());
+                 System.out.printf("Total Saldo untuk simpanan bisnis anda berjumlah: %.0f\n", objekBisnis.getSaldo());
              }else if (pilihan == 2){
+                 // Suatu manipulasi cara pada java untuk melakukan proses clear screen
+                 System.out.print("\033[H\033[2J");
+                 System.out.flush();
                  System.out.print("Masukkan jumlah uang yang ingin anda tarik: ");
                  jumlahPenarikan = in.nextDouble();
                  objekBisnis.tarikUang(jumlahPenarikan);
                  System.out.println("====================== STATUS PADA PENARIKAN DANA BISNIS ==========================");
                  System.out.println("NAMA : " + objekBisnis.getNama());
                  System.out.println("NO REK :" + objekBisnis.getNoRekening());
-                 System.out.printf("Total Saldo untuk simpanan bisnis anda berjumlah: %f\n", objekBisnis.getSaldo());
+                 System.out.printf("Total Saldo untuk simpanan bisnis anda berjumlah: %.0f\n", objekBisnis.getSaldo());
              }else{
                  System.out.println("MAAF PILIHAN YANG ANDA MASUKKAN TIDAK TERSEDIA! SILAHKAN COBA LAGI");
              }
@@ -90,6 +105,9 @@ public class TestTabungan
             }
                 break;
             case 2:
+            // Suatu manipulasi cara pada java untuk melakukan proses clear screen
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
             if(saldoAwal > 500000){
                 objekBisnis.setSaldo(0); // Dana pada tabungan bisnis dimulai dari nol terlebih dahulu
                 do{
@@ -100,18 +118,24 @@ public class TestTabungan
                  System.out.print("Tentukan pilihan anda: ");
                  pilihan = in.nextInt();
              if(pilihan == 1){
-                 System.out.println("====================== STATUS PADA PENYIMPANAN DANA HAJI ========================");
                  objekHaji.simpanUang(uang);
+                 System.out.println("====================== STATUS PADA PENYIMPANAN DANA HAJI ========================");
+                 // Suatu manipulasi cara pada java untuk melakukan proses clear screen
+                 System.out.print("\033[H\033[2J");
+                 System.out.flush();
                  System.out.println("NAMA : " + objekHaji.getNama());
                  System.out.println("NO REK :" + objekHaji.getNoRekening());
-                 System.out.printf("Total Saldo untuk simpanan haji anda berjumlah: %f\n",objekHaji.getSaldo());
+                 System.out.printf("Total Saldo untuk simpanan haji anda berjumlah: %.0f\n",objekHaji.getSaldo());
              }else if (pilihan == 2){
-                 System.out.printf("SALDO ANDA SEKARANG BERJUMLAH : %f\n", objekHaji.getSaldo());
+                 System.out.printf("SALDO ANDA SEKARANG BERJUMLAH : %.0f\n", objekHaji.getSaldo());
                  objekHaji.tarikUang(jumlahPenarikan);
+                 // Suatu manipulasi cara pada java untuk melakukan proses clear screen
+                 System.out.print("\033[H\033[2J");
+                 System.out.flush();
                  System.out.println("====================== STATUS PADA PENARIKAN DANA HAJI ==========================");
                  System.out.println("NAMA : " + objekHaji.getNama());
                  System.out.println("NO REK :" + objekHaji.getNoRekening());
-                 System.out.printf("Total Saldo untuk untuk simpanan haji anda berjumlah: %f \n",objekHaji.getSaldo());
+                 System.out.printf("Total Saldo untuk untuk simpanan haji anda berjumlah: %.0f \n",objekHaji.getSaldo());
              }else{
                  System.out.println("MAAF PILIHAN YANG ANDA MASUKKAN TIDAK TERSEDIA! SILAHKAN COBA LAGI");
              }
@@ -123,6 +147,9 @@ public class TestTabungan
             }
                 break;
         }
+            // Suatu manipulasi cara pada java untuk melakukan proses clear screen
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
             System.out.println("================================ TERIMA KASIH TELAH MENCOBA APLIKASI KAMI  ^_^ ============================================");
             System.out.print("Apakah anda ingin mencoba Aplikasi ini lagi  (Y/N) ?: ");
             kalimat = inputLagi.nextLine();
@@ -132,7 +159,6 @@ public class TestTabungan
                condition = false;
             }
         }
-           System.out.println("================================ TERIMA KASIH TELAH MENGGUNAKAN APLIKASI KAMI ================================");
           // Memanggil method close untuk menutup inputan
           in.close();
           inputLagi.close();
