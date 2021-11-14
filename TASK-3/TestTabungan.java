@@ -9,7 +9,8 @@ public class TestTabungan
     /**
      * Sebuah method untuk membersihkan layar pada kondisi tertentu
      */
-    static void clearScreen() {
+    static void clearScreen()
+    {
         try {
             final String os = System.getProperty("os.name");
             if (os.contains("Windows")) {
@@ -119,7 +120,7 @@ public class TestTabungan
             case 2:
             clearScreen();
             if(saldoAwal > 500000){
-                objekBisnis.setSaldo(0); // Dana pada tabungan bisnis dimulai dari nol terlebih dahulu
+                objekHaji.setSaldo(0); // Dana pada tabungan bisnis dimulai dari nol terlebih dahulu
                 do{
                  System.out.println("==== TABUNGAN HAJI ====");
                  System.out.printf("Saldo pada tabungan haji anda berjumlah:  %.0f\n" , objekBisnis.getSaldo());
@@ -129,9 +130,9 @@ public class TestTabungan
                  System.out.print("Tentukan pilihan anda: ");
                  pilihan = in.nextInt();
              if(pilihan == 1){
+                 clearScreen();
                  objekHaji.simpanUang(uang);
                  System.out.println("====================== STATUS PADA PENYIMPANAN DANA HAJI ========================");
-                 clearScreen();
                  System.out.println("NAMA : " + objekHaji.getNama());
                  System.out.println("NO REK :" + objekHaji.getNoRekening());
                  System.out.printf("Total Saldo untuk simpanan haji anda berjumlah: %.0f\n",objekHaji.getSaldo());
