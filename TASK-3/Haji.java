@@ -46,14 +46,14 @@ public class Haji extends Tabungan
             System.out.printf("Total Saldo Anda Adalah : %.0f \n",saldoSekarang);
             do{
             if(i > 0){
-                System.out.println("Berapakah uang yang anda ingin tarik: ");
+                System.out.println("Sekali lagi, Berapakah uang yang anda ingin tarik: ");
                 jumlahPenarikan = inputAngka.nextDouble();
             }else{
             System.out.print("Berapakah uang yang anda ingin tarik: ");
             jumlahPenarikan = inputAngka.nextDouble();
             }
             if(jumlahPenarikan > saldoSekarang * 10 / 100 && i == 0){
-                System.out.println("Disarankan untuk tidak mengambil lebih dari 10 persen!");
+                System.out.println("Jika anda mengambil 10 persen dari total saldo anda maka akan ada pengurangan 50 ribu");
                 i++;
             }else if(jumlahPenarikan > saldoSekarang * 10 / 100){
                 System.out.println("Karena anda mengambil lebih dari 10 persen maka akan ada pemotongan 50 ribu");
