@@ -30,6 +30,10 @@ public class TestTabungan
         Scanner inputSaldoAwal = new Scanner(System.in);
         Scanner inputTarikUang = new Scanner(System.in);
 
+        /* Suatu pertanyaan untuk menegaskan pengguna untuk menjalankan program ini di terminal saja!!!!, 
+        Jika program ini di jalankan di terminal maka pernyataan di atas ini tidak akan muncul ^_^ */
+        System.out.println("WARNING!!!!!!!");
+        System.out.println("PASTIKAN ANDA MENJANKAN PRGORAM INI DI TERMINAL AGAR PROGRAM INI DAPAT BERJALAN SECARA MAKSIMAL!!!!!!!!");
         while (condition) {
         // Suatu manipulasi cara pada java untuk melakukan proses clear screen
         System.out.print("\033[H\033[2J");
@@ -50,7 +54,7 @@ public class TestTabungan
         Haji objekHaji = new Haji(nama, noRek, saldoAwal);
 
         System.out.printf("Saldo anda sekarang berjumlah : %.0f\n", saldoAwal);
-        System.out.println(" | Berikut ini adalah menu yang tersedia di aplikasi tabungan sederhana ini | ");
+        System.out.println("| Berikut ini adalah menu yang tersedia di aplikasi tabungan sederhana ini| ");
         System.out.println("|===========     MENU      ==============|");
         System.out.println("|===========  1. Bisnis    ==============|");
         System.out.println("|===========  2. Haji      ==============|");

@@ -1,12 +1,7 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all they need to know. The comments should usually include at least:
-------------------------------------------------------------------------
-
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+PROJECT TITLE: APLIKASI TABUNGAN SEDERHANA 
+PURPOSE OF PROJECT: TUJUAN DARI PROJEK INI ADALAH UNTUK MASALAH DANA TERKAIT KEBUTUHAN BISNIS DAN HAJI
+VERSION or DATE: 11-11-2021
+AUTHORS: Abdul Hafidh
+USER INSTRUCTIONS: UNTUK MENJALANKAN APLIKASI INI SEBAIKNYA DILAKUKAN DI TERMINAL SAJA JANGAN RUN DI BLUEJ!!, DIKARENAKAN
+                   OUTPUT BLUEJ TIDAK DAPAT MELAKUKAN PROSES CLEAR SCREEN KETIKA PROGRAM SEDANG BERLANGSUNG!!
+LINK GDRIVE: 

@@ -40,8 +40,7 @@ public class Haji extends Tabungan
         Scanner inputKata = new Scanner(System.in);
         Scanner inputAngka = new Scanner(System.in);
         double saldoSekarang = super.getSaldo();
-
-            
+        double sisaPenarikan = saldoSekarang - jumlahPenarikan;
         while(kondisi){
             i = 0;
             System.out.printf("Total Saldo Anda Adalah : %.0f \n",saldoSekarang);
@@ -62,13 +61,15 @@ public class Haji extends Tabungan
                 saldoSekarang = saldoSekarang -  50000;
                 super.setSaldo(saldoSekarang);
                 i++;
+            }else if(jumlahPenarikan < 0 || sisaPenarikan < 0){
+                System.out.println("Maaf anda tidak bisa tarik uang silahkan coba lagi!");
             }else{
                 System.out.println("karena kurang dari 10 persen dari total saldo maka tidak akan ada pengurangan");
                 saldoSekarang = saldoSekarang - jumlahPenarikan;
                 super.setSaldo(saldoSekarang);
             }
     
-              }while((jumlahPenarikan > saldoSekarang * 10 / 100) && (i == 1));
+              }while(((jumlahPenarikan > saldoSekarang * 10 / 100) && (i == 1)) || (jumlahPenarikan < 0 || sisaPenarikan < 0));
     
               System.out.print("Apakah anda ingin menarik uang untuk kebutuhan haji lagi (Y/N)?: ");
               kalimat = inputKata.nextLine();
