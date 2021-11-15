@@ -28,7 +28,7 @@ public class Haji extends Tabungan
     }
     
     /**
-     * Sebuah method yang di override dari super method yaitu dari class Tabungan
+     * Sebuah method yang di override dari super method yaitu dari abstract class Tabungan
      * @param jumlahPenarikan
      */
     @Override
@@ -71,7 +71,7 @@ public class Haji extends Tabungan
     
               }while(((jumlahPenarikan > saldoSekarang * 10 / 100) && (i == 1)) || (jumlahPenarikan < 0 || sisaPenarikan < 0));
     
-              System.out.print("Apakah anda ingin menarik uang untuk kebutuhan haji lagi (Y/N)?: ");
+              System.out.print("Tekan \"y\" untuk menarik uang untuk kebutuhan haji lagi: ");
               kalimat = inputKata.nextLine();
     
               if(kalimat.equalsIgnoreCase("y")){

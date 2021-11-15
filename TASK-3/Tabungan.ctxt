@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Tabungan
-comment0.text=\r\n\ Sebuah\ class\ yang\ terdapat\ informasi\ dari\ si\ penabung\r\n\ @author\ Abdul\ Hafidh\r\n\ @version\ 2021.11.02\r\n
+comment0.text=\r\n\ Sebuah\ class\ abstract\ yang\ terdapat\ informasi\ dari\ si\ penabung\r\n\ @author\ Abdul\ Hafidh\r\n\ @version\ 2021.11.02\r\n
 comment1.params=
 comment1.target=Tabungan()
 comment1.text=\r\n\ Sebuah\ method\ constructor\ di\ class\ Tabungan\ tanpa\ adanya\ parameter\r\n
@@ -12,10 +12,10 @@ comment2.target=Tabungan(java.lang.String,\ long)
 comment2.text=\r\n\ Sebuah\ method\ constructor\ yang\ diberi\ parameter\ dengan\ nama,\ dan\ noRekening\r\n\ @param\ nama\r\n\ @param\ noRekening\r\n
 comment3.params=
 comment3.target=java.lang.String\ getNama()
-comment3.text=\r\n\ \r\n\ @return\ this.nama\r\n
+comment3.text=\r\n\ Sebuah\ method\ getter\ untuk\ mendapatkan\ nilai\ dari\ variabel\ global\ nama\r\n\ @return\ this.nama\r\n
 comment4.params=
 comment4.target=long\ getNoRekening()
-comment4.text=\r\n\ \r\n\ @return\ this.noRekening\r\n
+comment4.text=\r\n\ Sebuah\ method\ getter\ untuk\ mendapatkan\ no\ rekening\ dari\ variabel\ global\ noRekening\r\n\ @return\ this.noRekening\r\n
 comment5.params=saldo_minimum
 comment5.target=void\ setSaldoMinimum(double)
 comment5.text=\r\n\ Sebuah\ method\ untuk\ mengeset\ nilai\ dari\ saldo_minimum\r\n\ @param\ saldo_minimum\r\n

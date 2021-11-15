@@ -6,5 +6,5 @@ comment1.target=Haji(java.lang.String,\ long,\ double)
 comment1.text=\r\n\ Sebuah\ Method\ Constructor\ untuk\ class\ haji\ dengan\ adanya\ 3\ parameter\r\n\ @param\ nama\r\n\ @param\ noRek\r\n\ @param\ saldoAwal\r\n
 comment2.params=jumlahPenarikan
 comment2.target=void\ tarikUang(double)
-comment2.text=\r\n\ Sebuah\ method\ yang\ di\ override\ dari\ super\ method\ yaitu\ dari\ class\ Tabungan\r\n\ @param\ jumlahPenarikan\r\n
+comment2.text=\r\n\ Sebuah\ method\ yang\ di\ override\ dari\ super\ method\ yaitu\ dari\ abstract\ class\ Tabungan\r\n\ @param\ jumlahPenarikan\r\n
 numComments=3

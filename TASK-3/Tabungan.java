@@ -1,6 +1,6 @@
 import java.util.Scanner;
 /**
- * Sebuah class yang terdapat informasi dari si penabung
+ * Sebuah class abstract yang terdapat informasi dari si penabung
  * @author Abdul Hafidh
  * @version 2021.11.02
  */
@@ -34,7 +34,7 @@ abstract class Tabungan
    
    
     /**
-     * 
+     * Sebuah method getter untuk mendapatkan nilai dari variabel global nama
      * @return this.nama
      */
     public String getNama()
@@ -43,7 +43,7 @@ abstract class Tabungan
     }
     
     /**
-     * 
+     * Sebuah method getter untuk mendapatkan no rekening dari variabel global noRekening
      * @return this.noRekening
      */
     public long getNoRekening()

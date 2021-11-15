@@ -110,7 +110,7 @@ public class TestTabungan
              }else{
                  System.out.println("MAAF PILIHAN YANG ANDA MASUKKAN TIDAK TERSEDIA! SILAHKAN COBA LAGI");
              }
-             System.out.print("Apakah anda ingin menarik atau menyimpan uang lagi untuk kebutuhan dana bisnis? (y/n)?");
+             System.out.print("Tekan \"y\" untuk menarik atau menyimpan uang lagi untuk kebutuhan dana bisnis : ");
              kalimat = inputLagi.nextLine();
             }while(pilihan < 1 || pilihan > 2 || kalimat.equalsIgnoreCase("y"));
             }else{
@@ -123,7 +123,7 @@ public class TestTabungan
                 objekHaji.setSaldo(0); // Dana pada tabungan bisnis dimulai dari nol terlebih dahulu
                 do{
                  System.out.println("==== TABUNGAN HAJI ====");
-                 System.out.printf("Saldo pada tabungan haji anda berjumlah:  %.0f\n" , objekBisnis.getSaldo());
+                 System.out.printf("Saldo pada tabungan haji anda berjumlah:  %.0f\n" , objekHaji.getSaldo());
                  System.out.println("PILIH APAKAH ANDA INGIN MENARIK ATAU MENYIMPAN UANG ? ");
                  System.out.println("1. Simpan uang");
                  System.out.println("2. Tarik uang");
@@ -147,7 +147,7 @@ public class TestTabungan
              }else{
                  System.out.println("MAAF PILIHAN YANG ANDA MASUKKAN TIDAK TERSEDIA! SILAHKAN COBA LAGI");
              }
-             System.out.print("Apakah anda ingin Menarik atau Menyimpan uang lagi untuk kebutuhan dana haji?  (y/n )  ");
+             System.out.print("Tekan \"y\" untuk Menarik atau Menyimpan uang lagi untuk kebutuhan dana haji:  ");
              kalimat = inputLagi.nextLine();
             }while(pilihan < 1 || pilihan > 2 || kalimat.equalsIgnoreCase("y"));
             }else{
@@ -156,7 +156,7 @@ public class TestTabungan
                 break;
         }
             System.out.println("================================ TERIMA KASIH TELAH MENCOBA APLIKASI KAMI  ^_^ ============================================");
-            System.out.print("Apakah anda ingin mencoba Aplikasi ini lagi  (Y/N) ?: ");
+            System.out.print("Tekan \"y\" mencoba Aplikasi ini lagi: ");
             kalimat = inputLagi.nextLine();
             if(kalimat.equalsIgnoreCase("y")){
                condition = true;
