@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=TestTabungan
-comment0.text=\r\n\ Sebuah\ class\ yang\ berisi\ method\ main\ yang\ bertujuan\ untuk\ menjalankan\ output\r\n\ @author\ Abdul\ Hafidh\r\n\ @version\ 2021.11.02\r\n
+comment0.text=\r\n\ Sebuah\ class\ yang\ berisi\ method\ main\ yang\ bertujuan\ untuk\ menjalankan\ output\ \r\n\ Berikut\ ini\ adalah\ link\ gdrive\ untuk\ membahas\ isi\ source\ code\:\ https\://drive.google.com/file/d/1uAC2_k3vA2UoNDI81k3FzFleYTNrSYi8/view?usp\=sharing\r\n\ @author\ Abdul\ Hafidh\r\n\ @version\ 2021.11.02\r\n
 comment1.params=
 comment1.target=void\ clearScreen()
 comment1.text=\r\n\ Sebuah\ method\ untuk\ membersihkan\ layar\ pada\ kondisi\ tertentu\r\n

@@ -1,8 +1,8 @@
 PROJECT TITLE: APLIKASI TABUNGAN SEDERHANA 
 PURPOSE OF PROJECT: TUJUAN DARI PROJEK INI ADALAH UNTUK MASALAH DANA TERKAIT KEBUTUHAN BISNIS DAN HAJI
 VERSION or DATE: 11-11-2021
-AUTHORS: Abdul Hafidh
+AUTHORS: Abdul Hafidh (2008107010056)
 USER INSTRUCTIONS: UNTUK MENYIMPAN DANA DI FITUR TABUNGAN ATAU BISNIS, SI PENGGUNA HARUS MEMILIKI SALDO AWAL YANG MEMNENUHI AGAR BISA MENGGUNAKAN FITUR TERSEBUT
-                  1. Di fitur bisnis anda harus memiliki saldo awal lebih besar atau sama dengan 1000000 untuk bisa menggunakanya
-                  2. Di fitur haji anda harus memiliki saldo awal lebih besar atau sama dengan 500000 untuk bisa menggunakanya
-LINK GDRIVE: 
+                  1. Di fitur bisnis anda harus memiliki saldo awal lebih besar atau sama dengan 50.000 untuk bisa menggunakanya
+                  2. Di fitur haji anda harus memiliki saldo awal lebih besar atau sama dengan 100.000 untuk bisa menggunakanya
+LINK GDRIVE: https://drive.google.com/file/d/1uAC2_k3vA2UoNDI81k3FzFleYTNrSYi8/view?usp=sharing

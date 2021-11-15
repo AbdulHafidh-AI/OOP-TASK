@@ -1,6 +1,7 @@
 import java.util.Scanner;
 /**
- * Sebuah class yang berisi method main yang bertujuan untuk menjalankan output
+ * Sebuah class yang berisi method main yang bertujuan untuk menjalankan output 
+ * Berikut ini adalah link gdrive untuk membahas isi source code: https://drive.google.com/file/d/1uAC2_k3vA2UoNDI81k3FzFleYTNrSYi8/view?usp=sharing
  * @author Abdul Hafidh
  * @version 2021.11.02
  */
@@ -9,7 +10,7 @@ public class TestTabungan
     /**
      * Sebuah method untuk membersihkan layar pada kondisi tertentu
      */
-    static void clearScreen()
+    private static void clearScreen()
     {
         try {
             final String os = System.getProperty("os.name");
@@ -81,7 +82,7 @@ public class TestTabungan
         switch (pilihan){
             case 1:
             clearScreen();
-            if(saldoAwal > 1000000){
+            if(saldoAwal > 50000){
                 objekBisnis.setSaldo(0); // Dana pada tabungan bisnis dimulai dari nol terlebih dahulu
                 do{
                  System.out.println("==== TABUNGAN BISNIS ====");
@@ -119,7 +120,7 @@ public class TestTabungan
                 break;
             case 2:
             clearScreen();
-            if(saldoAwal > 500000){
+            if(saldoAwal > 100000){
                 objekHaji.setSaldo(0); // Dana pada tabungan bisnis dimulai dari nol terlebih dahulu
                 do{
                  System.out.println("==== TABUNGAN HAJI ====");
