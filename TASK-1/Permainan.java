@@ -5,7 +5,14 @@ import java.util.Scanner; // Library Scanner (untuk mengakses proses input)
  * @author Abdul Hafidh
  * @version 2021.09.23
  */
-public class Permainan {
+public class Permainan
+{
+    /**
+     * The main method that reads input, calls the function 
+     * for each question's query, and output the results.
+     * @param args Unused.
+     * @return Nothing.
+     */
     public static void main(String[] args) {
         // Inisialisasi Variabel
         String ulang;
