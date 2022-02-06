@@ -31,8 +31,10 @@ public class TestTabungan
         }
     }   
     /**
-     * Sebuah method main yang bertujuan untuk melakukan operasi input dan output
-     * @param args
+     * The main method that reads input, calls the function 
+     * for each question's query, and output the results.
+     * @param args Unused.
+     * @return Nothing.
      */
     public static void main(String[] args)
     {

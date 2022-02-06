@@ -36,8 +36,10 @@ public class MainSquirrelJump {
         this.kalimat = kalimat;
     }
     /**
-     * Sebuah method main untuk mengeluarkan output yang diinginkan
-     * @param a
+     * The main method that reads input, calls the function 
+     * for each question's query, and output the results.
+     * @param args Unused.
+     * @return Nothing.
      */
     public static void main(String[] a) {
         // INISIALISASI VARIABEL
